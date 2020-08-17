@@ -1,0 +1,98 @@
+/* Site header */
+.site-header {
+    display: flex;
+    /*
+    the logo will be on the left side of the flex container,
+    and the menu will be on right side of the flex container
+    with empty space between them
+    */
+    justify-content: space-between;
+    align-items: center;
+    /* Give some padding so the items are not exactly on the edge of the browser */
+    padding: 16px 32px;
+}
+
+.logo-link {
+    /* Size the logo link */
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+.site-menu-list {
+    display: flex;
+    list-style: none;
+}
+
+.site-menu-list li {
+    margin: 0 8px;
+}
+
+.site-menu-list a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Page sections */
+.page-section {
+    display: flex;
+    height: 100vh;
+}
+
+/*
+flex-direction determines the main axis
+flex-direction: row -> main axis goes horizontally from left to right, cross axis is perpendicular to main axis
+flex-direction: column -> main axis goes vertically from top to bottom, cross axis is perpendicular to main axis
+justify-content -> align content along the main axis
+align-items -> align content along the cross axis
+*/
+.page-section--flex-row {
+    justify-content: center;
+    /* 
+    center vertically
+    or on the cross axis
+    */
+    align-items: center;
+
+    background-color: mistyrose;
+}
+
+/* Center text within a flex child */
+.page-section--flex-row h1 {
+    text-align: center;
+}
+
+/* Wrapping content */
+.page-section--flex-wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    background-color: coral;
+}
+
+.page-section--flex-wrap h1 {
+    /* We use fixed width here to see the effect of wrapping the items where it no more space to stack them on the flex main axis */
+    width: 350px;
+    margin: 4px;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.5);
+}
+
+/*
+    Arrange flex children in a column
+    width flex-direction.
+    By default they would stack in a row.
+*/
+.page-section--flex-col {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color:lightgrey;
+}
+
+/* We can add some spacing on the h1 with padding */
+.page-section--flex-col h1 {
+    padding: 15px 30px;
+}
